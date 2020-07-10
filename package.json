@@ -1,0 +1,45 @@
+{
+  "name": "miko",
+  "version": "1.0.0",
+  "description": "let's slap some table",
+  "main": "index.js",
+  "repository": "git@github.com:rayriffy/miko.git",
+  "author": "Phumrapee Limpianchop <contact@rayriffy.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-pwa-manifest": "^3.0.10",
+    "parcel-plugin-sw-cache": "^0.3.1",
+    "typescript": "^3.9.6"
+  },
+  "pwaManifest": {
+    "name": "ミコ",
+    "shortName": "ミコ",
+    "startURL": "./",
+    "theme": "#1a202c",
+    "generateIconOptions": {
+      "baseIcon": "./src/img/favicon.png",
+      "sizes": [
+        192,
+        384,
+        512
+      ],
+      "display": "standalone",
+      "purpose": [
+        "any",
+        "maskable"
+      ],
+      "genFavicons": true
+    }
+  },
+  "cache": {
+    "disablePlugin": false,
+    "inDev": false,
+    "strategy": "default"
+  }
+}
