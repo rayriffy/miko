@@ -143,3 +143,4 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/macos,node
 # Local Netlify folder
 .netlify
+.vercel
