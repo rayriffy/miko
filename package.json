@@ -12,6 +12,7 @@
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
+    "@types/node": "^14.0.22",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-pwa-manifest": "^3.0.10",
     "parcel-plugin-sw-cache": "^0.3.1",
