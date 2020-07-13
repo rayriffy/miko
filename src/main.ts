@@ -1,10 +1,11 @@
 // Predefined variables
-const appEl = document.querySelector('#app'),
-  // Use single audio source to reset multiple audio play bug on Safari.
-  sfx = new Audio(require('./sound/sfx.mp3'))
+const appEl = document.querySelector('#app')
+
+// Use single audio source to reset multiple audio play bug on Safari.
+const sfx = new Audio(require('./sound/sfx.mp3'))
 
 // Attatch multiple event with same function
-const eventMap = (element: Element, events: string[], callback: () => any) => {
+const eventMap = <T = unknown>(element: Element, events: string[], callback: () => T) => {
   events.forEach((event) => {
     element.addEventListener(event, callback, false)
   })
@@ -17,7 +18,7 @@ const trigger = () => {
   // SFX
   sfx.currentTime = 0
   sfx.play()
-};
+}
 
 const idle = () => {
   appEl.removeAttribute('class')
