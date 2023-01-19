@@ -1922,6 +1922,13 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
+parcel-config-precache-manifest@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/parcel-config-precache-manifest/-/parcel-config-precache-manifest-0.0.4.tgz#4d0992f57d2681d89117d4b987f47f23fb963236"
+  integrity sha512-lt2719umGDl+/l6zmaP+vskqMapHJ95BdcYUWvmy9+xnJCNseuaz9rQW1PBIAXaHKFQHqQ5PtSCRwfHdknWjkw==
+  dependencies:
+    parcel-runtime-precache-manifest "^0.0.5"
+
 parcel-config-pwa-manifest@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/parcel-config-pwa-manifest/-/parcel-config-pwa-manifest-0.1.2.tgz#4c157fb78b12d39fc51a462a7a77a31314177f39"
@@ -1937,6 +1944,11 @@ parcel-plugin-sw-cache@^0.3.1:
     replace-in-file "^4.1.0"
     rimraf "^2.6.3"
     workbox-build "^4.3.1"
+
+parcel-runtime-precache-manifest@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/parcel-runtime-precache-manifest/-/parcel-runtime-precache-manifest-0.0.5.tgz#ccdaa6b9685f72e42c60f13555bc8f70b01498ff"
+  integrity sha512-SJaggUvINkN332gY6DCmqQ6iKcG5aTHE6XxJnrN935RRCIoOUH9Fxh0uft9Hg4GIkowO8xZDvcAZAIEFrMkvpg==
 
 parcel-transformer-pwa-manifest@^0.1.2:
   version "0.1.2"
