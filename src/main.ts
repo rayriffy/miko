@@ -2,7 +2,8 @@
 const appEl = document.querySelector('#app')
 
 // Use single audio source to reset multiple audio play bug on Safari.
-const sfx = new Audio(require('./sound/sfx.mp3'))
+const sfxUrl = new URL('./sound/sfx.mp3', import.meta.url)
+const sfx = new Audio(sfxUrl.toString())
 
 // Attatch multiple event with same function
 const eventMap = <T = unknown>(element: Element, events: string[], callback: () => T) => {
@@ -13,7 +14,7 @@ const eventMap = <T = unknown>(element: Element, events: string[], callback: () 
 
 const trigger = () => {
   // Slap
-  appEl.setAttribute('class', 'slap')
+  appEl?.setAttribute('class', 'slap')
 
   // SFX
   sfx.currentTime = 0
@@ -21,7 +22,7 @@ const trigger = () => {
 }
 
 const idle = () => {
-  appEl.removeAttribute('class')
+  appEl?.removeAttribute('class')
 
   sfx.addEventListener('ended', () => {
     /**
@@ -37,6 +38,8 @@ const idle = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  eventMap(appEl, ['mousedown', 'touchstart'], trigger)
-  eventMap(appEl, ['mouseup', 'touchend'], idle)
+  if (appEl !== null) {
+    eventMap(appEl, ['mousedown', 'touchstart'], trigger)
+    eventMap(appEl, ['mouseup', 'touchend'], idle)
+  }
 })

@@ -2,21 +2,23 @@
   "name": "miko",
   "version": "1.0.0",
   "description": "let's slap some table",
-  "main": "index.js",
   "repository": "git@github.com:rayriffy/miko.git",
   "author": "Phumrapee Limpianchop <contact@rayriffy.com>",
   "license": "MIT",
   "private": true,
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "@types/node": "^14.0.22",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-pwa-manifest": "^3.0.10",
+    "@parcel/config-default": "^2.8.3",
+    "@parcel/transformer-typescript-tsc": "^2.8.3",
+    "@types/node": "^18.11.18",
+    "parcel": "^2.8.3",
+    "parcel-plugin-pwa-manifest": "^3.1.1",
     "parcel-plugin-sw-cache": "^0.3.1",
-    "typescript": "^3.9.6"
+    "typescript": "^4.9.4"
   },
   "pwaManifest": {
     "name": "ミコ",

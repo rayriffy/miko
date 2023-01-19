@@ -1,0 +1,41 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_dispatch:
+
+jobs:
+  runtime:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - name: 'Intitialize: Checkout repository'
+        uses: actions/checkout@v3
+      - name: 'Intitialize: Summon NodeJS'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: 'Cache: node_modules'
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.OS }}-x86-node18-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-x86-node18-yarn-${{ env.cache-name }}-
+            ${{ runner.OS }}-x86-node18-yarn-
+      - name: 'Intitialize: Install dependencies'
+        run: yarn install --frozen-lockfile
+      - name: 'Execute: Build'
+        run: yarn build
+      - name: 'Deployment: Upload artifacts'
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist
+      - name: 'Deployment: Deploy to target'
+        id: deployment
+        uses: actions/deploy-pages@v1
+      - name: 'Post-deplotyment: Logging'
+        run: echo "Deployed at ${{ steps.deployment.outputs.page_url }}"
