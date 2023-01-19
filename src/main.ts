@@ -43,3 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
     eventMap(appEl, ['mouseup', 'touchend'], idle)
   }
 })
+
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register(new URL('./sw.js', import.meta.url))
+}

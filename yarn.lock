@@ -477,6 +477,14 @@
     globals "^13.2.0"
     nullthrows "^1.1.1"
 
+"@parcel/packager-raw-url@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-raw-url/-/packager-raw-url-2.8.3.tgz#5994dca47f37a395deb0fd5b574a9d4656617f47"
+  integrity sha512-v8k/x2pnR3DDiIJrPTUcBd+MjH9ocpac0dsdJ02yeyGIQTecqL6nuCtu6W4m75CC7vFjjh/aCK9TJsOHOFnCFQ==
+  dependencies:
+    "@parcel/plugin" "2.8.3"
+    "@parcel/utils" "2.8.3"
+
 "@parcel/packager-raw@2.8.3":
   version "2.8.3"
   resolved "https://registry.yarnpkg.com/@parcel/packager-raw/-/packager-raw-2.8.3.tgz#bdec826df991e186cb58691cc45d12ad5c06676e"
@@ -493,6 +501,16 @@
     "@parcel/types" "2.8.3"
     "@parcel/utils" "2.8.3"
     posthtml "^0.16.4"
+
+"@parcel/packager-xml@2.8.3":
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-xml/-/packager-xml-2.8.3.tgz#658787349e1cd7de3eed99759cb4593512da125d"
+  integrity sha512-uzxwOyhr8OV7WWEYWK+Qu7EVaHNKMAKxYUqDy3yhzdo/n7bfhy9TSQMWCVuTtnNVOrG2n87+X0ywHkpyTQqIvQ==
+  dependencies:
+    "@parcel/plugin" "2.8.3"
+    "@parcel/types" "2.8.3"
+    "@parcel/utils" "2.8.3"
+    "@xmldom/xmldom" "^0.7.5"
 
 "@parcel/plugin@2.8.3":
   version "2.8.3"
@@ -810,6 +828,11 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+
+"@xmldom/xmldom@^0.7.5":
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.9.tgz#7f9278a50e737920e21b297b8a35286e9942c056"
+  integrity sha512-yceMpm/xd4W2a85iqZyO09gTnHvXF6pyiWjD2jcOJs7hRoZtNNOO1eJlhHj1ixA+xip2hOyGn+LgcvLCMo5zXA==
 
 abortcontroller-polyfill@^1.1.9:
   version "1.7.5"
@@ -1899,12 +1922,12 @@ p-try@^2.0.0:
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.2.0.tgz#cb2868540e313d61de58fafbe35ce9004d5540e6"
   integrity sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==
 
-parcel-plugin-pwa-manifest@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/parcel-plugin-pwa-manifest/-/parcel-plugin-pwa-manifest-3.1.1.tgz#b405e72e8f57290d20b456e6e023a1ee17d68828"
-  integrity sha512-QJ61MdD8jgacSFEdvdgduMXK0eUNS16qWqNJzCMRXuAXGTgoRmF9/Ym1MjH5jPinIUbaWYiC1UyNNcwAcIQ+4Q==
+parcel-config-pwa-manifest@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/parcel-config-pwa-manifest/-/parcel-config-pwa-manifest-0.1.2.tgz#4c157fb78b12d39fc51a462a7a77a31314177f39"
+  integrity sha512-MZI/WyecVeXzG5/WkC0P/xciowNaWhh+KkZ6yulx6MEB/WShg612LqBFMI1QMIzqSRu/34mDTjbWpEWBQr9Nog==
   dependencies:
-    "@pwa-manifest/core" "^1.5.1"
+    parcel-transformer-pwa-manifest "^0.1.2"
 
 parcel-plugin-sw-cache@^0.3.1:
   version "0.3.1"
@@ -1914,6 +1937,13 @@ parcel-plugin-sw-cache@^0.3.1:
     replace-in-file "^4.1.0"
     rimraf "^2.6.3"
     workbox-build "^4.3.1"
+
+parcel-transformer-pwa-manifest@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/parcel-transformer-pwa-manifest/-/parcel-transformer-pwa-manifest-0.1.2.tgz#4f591a5bbdde66ed8b099c4a7d29c01a8f884a9c"
+  integrity sha512-RrtK/C6BrnDe+2HKjGjdGGZ/1Iyxm8DKLsV2Tm1jMdBjlT3jwztfnDC+Uxri877Ol8mkbza2MFXxyKHOjrdEJQ==
+  dependencies:
+    "@pwa-manifest/core" "^1.5.1"
 
 parcel@^2.8.3:
   version "2.8.3"
